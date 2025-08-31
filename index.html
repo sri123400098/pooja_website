@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pooja Booking – Hyderabad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Background image + soft gradient is handled by CSS -->
+
+  <header class="site-header glass">
+    <div class="brand">
+      <span class="logo">🛕</span>
+      <div class="title-wrap">
+        <h1>Kiran Kumar Katrapally</h1>
+        <p>Authentic Vedic Poojas in Hyderabad (within 50 km radius)</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <input id="searchBar" class="search" type="text" placeholder="Search a pooja (e.g., Satyanarayan, Gruhapravesham)..." />
+    </div>
+  </header>
+
+  <!-- ONLY THIS PART CHANGED: added two-col + priestCard -->
+  <main class="container two-col">
+    <!-- Left: Sections injected by script.js -->
+    <div id="sections"></div>
+
+    <!-- Right: Priest info card -->
+    <aside id="priestCard" class="glass">
+      <img src="priest.jpg" alt="Sri Katrapally Kiran Kumar" class="priest-photo" />
+      <h2>Sri Katrapally Kiran Kumar</h2>
+      <div class="subtitle">Rigveda Pandit (రిగ్వేద పండితుడు)</div>
+      <p>
+        With over <strong>30 years</strong> of devoted service, Sri Katrapally Kiran Kumar
+        has guided thousands of families with authentic Vedic rituals and a calm, compassionate presence.
+        He served for <strong>25 years</strong> at <strong>Sri Sarweshwaralayam Temple</strong>,
+        leading daily worship and major festivals with precision and discipline.
+        Trained at the sacred <strong>Keesaragutta</strong>, he is a respected <strong>Krishna Yajurveda and Rigveda Pandit</strong>,
+        known for his clear mantra chanting, deep scriptural knowledge, and ability to explain the spiritual
+        significance of each ritual. His focus is simple—bringing blessings, peace, and purity to your home.
+      </p>
+      <h3>
+        Contact No: 9000655955
+      </h3>
+      <h3>
+        Email Id: ksrinikhi@gmail.com
+      </h3>
+    </aside>
+  </main>
+
+  <footer class="site-footer glass">
+    <p>© 2025 Sri Pooja Services · ECIL / Kapra · Hyderabad</p>
+  </footer>
+
+  <!-- Booking Modal -->
+  <dialog id="bookingModal" class="modal glass">
+    <form id="bookingForm" method="dialog">
+      <button type="button" class="modal-close" onclick="closeModal()">✕</button>
+      <h3 id="modalTitle">Book Pooja</h3>
+
+      <div class="form-grid">
+        <label>
+          Your Name
+          <input type="text" id="custName" required />
+        </label>
+
+        <label>
+          Phone (WhatsApp)
+          <input type="tel" id="custPhone" required />
+        </label>
+
+        <label>
+          Preferred Date
+          <input type="date" id="custDate" required />
+        </label>
+
+        <label>
+          Address / Landmark
+          <input type="text" id="custAddress" placeholder="E.g., Yellareddyguda, Kapra" required />
+        </label>
+
+        <label class="full">
+          Notes (optional)
+          <textarea id="custNotes" rows="3" placeholder="Any specific timings, gotram, etc."></textarea>
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-outline" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="btn-primary">Send on WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
